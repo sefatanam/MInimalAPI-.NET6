@@ -1,7 +1,10 @@
 ﻿
 class CustomerRepository : ICustomerRepository
 {
-    private readonly Dictionary<int, Customer> _customers = new Dictionary<int, Customer>();
+    private readonly Dictionary<int, Customer> _customers = new Dictionary<int, Customer>()
+    {
+        { 1, new Customer(1,"Sefat Anam") }
+    };
 
     public void Create(Customer customer)
     {
